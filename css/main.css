@@ -1,0 +1,559 @@
+/* GENERAL SETTINGS */
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+body{
+    background:#fff;
+    color: #3f3f3f;
+    font:14px / 28px arial;
+    font-family: 'Raleway';
+}
+h1{
+    font-size: 52px;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.sectionHeader {
+    background: darkolivegreen  ;
+    border-bottom: 6px solid #000 ;
+    height: 60px;
+    color: #fff;
+    display: inline-block;
+    line-height: 60px;
+    font-size: 24px;
+    padding: 5px 40px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.sectionHeader2 {
+    background: transparent;
+    border-bottom: 6px solid #000 ;
+    height: 65px;
+    color: #fff;
+    display: inline-block;
+    line-height: 60px;
+    font-size: 28px;
+    padding: 5px 40px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #500D16;
+    font-weight: bold;
+    transition: all .5s ease;
+    margin-bottom: 18px;
+    margin-top:  18px;
+}
+
+.sectionArea {
+    padding: 80px 0;
+    
+}
+
+/* GRID SETTINGS */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    line-height: 35px;
+    letter-spacing: 1px;
+   
+}
+
+.features .container {
+    justify-content: space-between;
+}
+
+.col3 {
+    flex-grow: 1;
+    width: 33.33%;
+    
+}
+
+.engineBody .container {
+    justify-content: space-between;
+    
+}
+
+
+.col2{
+    flex-grow: 1;
+    width: 50%;
+    padding: 20px;
+}
+.col6 {
+    
+    padding: 20px;
+}
+
+
+
+/* HOME SETTINGS */
+
+
+header .logo {
+    
+    margin-right: auto;
+}
+header .logo img{
+    
+    display: block;
+    height: 170px;
+}
+
+.menu li{
+    float: left;
+    
+}
+
+.menu li a{
+    padding: 27px 17px;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color:#333;
+    transition: all .5s ease;
+    
+    
+}
+
+.menu li:hover a{
+    background: #500D16;
+    color: #fff;
+}
+
+
+#mainSlider {
+    height:700px;
+    background: url('../img/anasayfa1.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+#packagesSlider {
+    height:600px;
+    background: url('../img/anasayfa22.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+#aboutSlider {
+    height:450px;
+    background: url('../img/hakkimizda-bg.png') center center no-repeat;
+    background-size: cover;
+    
+}
+#contactSlider {
+    height:450px;
+    background: url('../img/contact.png') center center no-repeat;
+    background-size: cover;
+    
+}
+
+
+#packagesCaption {
+    height: 750px;
+    background: rgba(0,0,0, .5);
+    color:antiquewhite;
+}
+.slider {
+    width: 100%;
+}
+
+#mainCaption {
+    height: 700px;
+    background: rgba(0,0,0, .5);
+}
+.caption {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: cornsilk;
+}
+.captionabout {
+    color: cornsilk;
+    width: 100%;
+    padding-top: 220px;
+}
+.captioncontact {
+    color: rgb(139, 33, 51);
+    width: 100%;
+    padding-top: 220px;
+}
+.abouth1 {
+    margin-left: 62%;
+    margin-right: 0px;
+    
+}
+.contact1 {
+    margin-left: 50%;
+    margin-right: 0px;
+    
+}
+
+.featuresTop {
+    text-align: center;
+}
+.aboutusTop {
+    width: 70%;
+    letter-spacing: 2px;
+    align-items: center;
+    margin-left: 100px;
+}
+
+
+
+.item {
+    padding: 10px 20px;
+    text-align: center;
+}
+.zoom {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;    
+}
+
+.zoom img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: all .5s ease;
+    
+}
+
+.item .itemText {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #500D16;
+    
+}
+
+
+.item:hover .zoom img{
+    transform: scale(1.15);
+}
+
+.item:hover h3 {
+    color: #fff;
+}
+
+.item:hover .itemText {
+    background: #500D16;
+    color: #fff;
+    transition: all .5s ease;
+}
+.inspectTop {
+    text-align: center;
+}
+
+.inspectImage {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+.contactBody .container {
+    display: flex;
+}
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.inspectImage button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color:darkslategray;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.inspectImage button:hover {
+    opacity: 0.7; 
+}
+.inspectImage:hover .zoom img{
+    transform: scale(1.15);
+}
+
+.inspectImage:hover h3 {
+    color: #fff;
+}
+
+.inspectImage:hover .inspectText {
+    background: darkslategray;
+    color: #fff;
+    transition: all .5s ease;
+}
+
+.projectXTop h3 {
+    text-align: center;
+}
+
+.projectXBody {
+    max-width: 1700px;
+    margin: auto;
+    text-align: center;
+}
+
+.loginbtn a{
+    color:#fff;
+    background-color: #500d16;
+    
+    padding: 27px 17px;
+    display: block;
+    text-decoration: none;
+    letter-spacing: 2px;
+    
+}
+.girisdiv li {
+    float: left;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+.loginbtn:hover a{
+    background-color:#fff;
+    color: #500d16;
+    transition: all .5s ease;
+}
+
+
+.hesaplabuton{
+    background-color: dimgray;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 18px;
+}
+.hesaplabuton {border-radius: 25px;}
+
+.textbox {
+    background: transparent;
+    border: none;
+    color:  #fff;
+    font-size: 22px;
+    text-align: center;
+    
+}
+.range {
+    width: 40%; 
+    
+}
+
+.item:hover .btnDetails {
+    color: #fff;
+    border: 1px solid #fff;
+    
+}
+.btnDetails2 {
+    color: #fff;
+    
+}
+
+.itemText p {
+    margin: 20px 0;
+}
+
+
+#parallax {
+    background: linear-gradient(
+                rgba(0,0,0,.4),
+                rgba(0,0,0,.4) 
+    
+                ),
+                url('../img/alternatifanasayfa2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.engineTop {
+
+    padding: 45px;
+    font-size: 18px;
+    background: linear-gradient(
+                rgba(0,0,0,.4),
+                rgba(0,0,0,.4) 
+    
+                ),
+                url('../img/hesapmakinesi4.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 1.5px;
+    line-height: 60px;
+    
+    
+}
+
+
+.engineContainer {
+    position: relative;
+    width: 100%;
+    
+}
+
+
+.imageOver {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.engineOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(80,13,22,.7);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.engineContainer:hover .engineOverlay {
+    width: 100%;
+}
+
+.engineText  {
+    white-space: nowrap;
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.engineOverlay2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(80,13,22,.7);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.engineContainer:hover .engineOverlay2 {
+    width: 100%;
+    left: 0;
+}
+
+footer{
+    background: #500D16;
+    text-align: center;
+}
+
+.footerItem {
+    padding: 20px; 
+}
+
+.footerItem img{
+    height: 50px;
+    opacity: .5;
+}
+
+footer h3 {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+footer .fa {
+    font-size: 30px;
+    color: #95a5a6;
+    line-height: 50px;
+    transition: .3s ease;
+
+}
+
+footer .fa:hover {
+    color: #fff;
+}
+
+footer p {
+    color: #95a5a6;
+    line-height: 20px;
+}
+
+
+
+.footerLinks a {
+    text-decoration: none;
+    color: #95a5a6;
+    letter-spacing: 2px;
+    transition: .3s ease;
+}
+
+.footerLinks a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.socialLinks li {
+    display: inline-block;
+    width: 50px;
+    height: 50px,
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

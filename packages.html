@@ -1,0 +1,256 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Adrese Teslim Yemek Aboneliği">
+        <meta name="author" content="Diet Box" >
+        <meta name="keywords" content="Yüksek proteinli ve diyet yemekler">
+        <meta name="viewport" content="width=devixe-width, initial-scale=1.0">
+        
+        <title>Diet Box - Beslenme Paketleri</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        
+        
+        <script language="JavaScript" type="text/javascript">
+            
+            function updateTextInput(val) { //kilo ve boy inputları(range bar)
+          document.getElementById('textInput').value=val; 
+            }
+            function updateTextInput2(val) {
+          document.getElementById('textInput2').value=val; 
+           
+        }
+            function hesapla() { //vücut kitle endeksi hesaplama kısmı
+            var kilo = document.KitleForm.kilo.value
+            var boy = document.KitleForm.boy.value
+            if(kilo > 0 && boy > 0){  
+                var sonuc = kilo/(boy/100*boy/100)
+                sonuc= Number(sonuc.toFixed(2));
+                document.KitleForm.endeks.value = sonuc
+                if(sonuc < 18.5){
+                    document.KitleForm.islemsonucu.value = "Protein ve Karbonhidrat Oranı Yüksek Beslenme Paketimizi Denemelisin"
+                }
+                if(sonuc > 18.5 && sonuc < 25){
+                    document.KitleForm.islemsonucu.value = "Formunuzu Korumak İçin Fit Beslenme Paketimizi Denemelisin"
+                }
+                if(sonuc > 25){
+                    document.KitleForm.islemsonucu.value = "Sağlıklı Kilo Vermek İçin Form Beslenme Paketimizi Denemelisin"
+                }
+            }
+                else{
+                    alert("Yanlış değerler girdiniz, Tekrar Deneyin")
+                }
+            }
+
+</script>
+        
+    </head>
+    
+    <body>
+        
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="index.php"><img src="img/LOGO.png"></a>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li><a href="index.php">HOME</a></li>
+                        <li><a href="packages.html">PACKAGES</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="contactus.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <!--  MAIN SECTION -->  
+        <section id="packagesSlider" claas="slider">
+            <div id="packagesCaption" class="caption">
+                <h1>BESLENME PAKETLERİ</h1>
+                <p>Herkese uygun beslenme çözümlerimiz, lezzetli ve sağlıklı yemeklerimizle yanınızdayız !</p>
+            </div>
+        </section>
+        
+        
+        <!--  ENGİNE SECTION --> 
+        <section id="engine" class="sectionArea">
+            <div class="engineTop">
+                <h2 class="sectionHeader2">Vücut Kitle İndeksinize Göre Size En Uygun Paketi Belirleyelim</h2>
+                <form name="KitleForm">
+                    
+      Kilo(kg) <input class="range" type="range" name="kilo" min="40" max="200" step=”1” onchange="updateTextInput(this.value);"><br />
+                <input class="textbox" type="text" id="textInput" value=""><br/>
+              
+        Boy(cm) <input class="range" type="range" name="boy" min="100" max="200" step=”1” onchange="updateTextInput2(this.value);"><br />
+                <input class="textbox" type="text" id="textInput2" value=""><br/>
+                    
+                <button class="hesaplabuton" type="button" onClick="hesapla()">Hesapla</button><br />
+                Vücut Kitle İndeksiniz: <input class="textbox" type="text" name="endeks" size="4"><br />
+                Önerilen Beslenme Paketi: <input class="textbox" type="text" name="islemsonucu" size="55"><br />
+                </form>
+            </div>
+         </section>
+        
+        <!--  INSPECT SECTION --> 
+        
+        <section id="inspect" class="sectionArea">
+            <div class="inspectTop">
+                <h2 class="sectionHeader">PAKETLERİ İNCELE</h2>
+                <h3>TÜKETMEYE HAZIR SAĞLIKLI ÖĞÜNLERLE FORMUNUZA KAVUŞUN</h3>
+            </div>
+            <div class="inspectBody">
+                <div class="container">
+                    <div class="col3">
+                        <div class="inspectImage">
+                            <div class="zoom">
+                                <img src="img/packagesdiyet.jpg">
+                            </div>
+                        
+                            <div class="inspectText">
+                                <h3>FORM BESLENME PAKETİ</h3>
+                                <p>Diyet yemek anlayışına gurme ev yemekleri tecrübemizi de ekleyerek, uzman diyetisyenlerle hazırladığımız gün boyu ihtiyacınız olan kalori miktarını karşılayan paketlerimizle diyeti lezzetli bir hale dönüştürüyoruz.</p>
+                                <p class="price">Günde 70.00₺ </p>
+                                <p><button onclick="window.location.href='OdemeEkrani.php'">Satın Almak İçin Tıkla</button></p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="inspectImage">
+                            <div class="zoom">
+                                <img src="img/packagesfit.jpg">
+                            </div>
+                       
+                            <div class="inspectText">
+                                <h3>FİT BESLENME PAKETİ</h3>
+                                <p>Uzman diyetisyenlerimizle birlikte hazırladığımız, sağlıklı bir şekilde kilo vermek için Fit Beslenme Paketini deneyebilirsiniz. Kahvaltı, öğle, akşam ve 2 ara öğünle istediğiniz forma kavuşun.</p>
+                                <p class="price">Günde 80.00₺ </p>
+                                <p><button onclick="window.location.href='OdemeEkrani.php'">Satın Almak İçin Tıkla</button></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col3">
+                        <div class="inspectImage">
+                            <div class="zoom">
+                                <img src="img/packagesprotein.jpg">
+                            </div>
+                        
+                            <div class="inspectText">
+                                <h3>PROTEİN BESLENME PAKETİ</h3>
+                                <p>Fiziksel aktivite ile birlikte kas kütlenizi arttırırken yağ oranınızı da kontrol altında tutmanızı sağlayan Protein ve Karbonhidrat oranı yüksek bu beslenme paketi ile hedeflediğiniz kiloya ve kas kütlesine ulaşın. </p>
+                                <p class="price">Günde 90.00₺ </p>
+                                <p><button onclick="window.location.href='OdemeEkrani.php'">Satın Almak İçin Tıkla</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!--  PROJECTX SECTION --> 
+        
+        <section id="projectX" class="sectionArea">
+            <div class="projectXTop">
+                <h3>Diet Box Kullanmanın Avantajları</h3>
+            </div>
+            <div class="projectXBody">
+                <div class="container">
+                    <div class="col6">
+                        <div class="projectXImage">
+                            <img src="img/PROJECT1.png">
+                            <div class="projectXText">
+                                <p>Protein menüleri, fit ve form menüleri ile ihtiyacınıza uygun 1200-1500-2000-2500 kalori aralığında paketler sunuyor.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col6">
+                        <div class="projectXImage">
+                            <img src="img/PROJECT2.png">
+                            <div class="projectXText">
+                                <p>Dengeli hazırlanmış 3 ana 2 ara öğün içerir. Bütün bir gün ne yiyeceğinizi düşünmessiniz.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col6">
+                        <div class="projectXImage">
+                            <img src="img/PROJECT3.png">
+                            <div class="projectXText">
+                                <p>Yoğun iş ve spor temponuzda adresinize günlük teslimat ile zaman kazanmanızı sağlar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col6">
+                        <div class="projectXImage">
+                            <img src="img/PROJECT4.png">
+                            <div class="projectXText">
+                                <p>Spor yapan kişilere özel nitrojen dengenizi sağlayacak şekilde hazırlanmıştır. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col6">
+                        <div class="projectXImage">
+                            <img src="img/PROJECT5.png">
+                            <div class="projectXText">
+                                <p>Protein içeriği sayesinde yeni kas dokusu oluşturmanızı ve hasar gören kasların onarımını sağlar.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col6">
+                        <div class="projectXImage">
+                            <img src="img/PROJECT6.png">
+                            <div class="projectXText">
+                                <p>Gereken günlük enerjiyi almanıza ve gün boyu zinde kalmanıza destek olur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- Footer Section-->
+        
+        <footer class="sectionArea">
+            <div class="container">
+                <div class="col3">
+                    <div class="footerItem">
+                        <h3>WELCOME TO DIET BOX</h3>
+                        <a href="index.html"><img src="img/LOGO.png"></a>
+                        <p>Adrese Teslim Yemek Aboneliği</p>
+                    </div>
+                </div>
+                <div class="col3">
+                    <div class="footerItem">
+                        <h3>QUICK LINKS</h3>
+                        <ul class="footerLinks">
+                            <li><a href="index.php">HOME</a></li>
+                            <li><a href="packages.html">PACKAGES</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="contactus.html">CONTACT US</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                    <div class="col3">
+                    <div class="footerItem">
+                        <h3>BE SOCIAL WITH US</h3>
+                        <ul class="socialLinks">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </footer>
+        
+ 
+        
+    </body>
+</html>
